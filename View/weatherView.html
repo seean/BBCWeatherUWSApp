@@ -1,0 +1,73 @@
+<!-- Banner ID : B00276760/B00276761 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+
+    <script src="../Library/jquery-1.11.1.js"></script>
+    <script src="../Library/jquery-1.11.1.min.js"></script>
+    
+    <script src="../Library/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" href="../Library/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    
+    <script type="text/javascript" src="../Library/jgfeed.js"></script>
+    <script type="text/javascript" src="../Controller/weatherController.js"></script>
+   
+    <style type="text/css">.img {padding-left:70px;}
+            #BBCButton {text-align: center;
+                        margin-left: 40%;}
+
+    </style>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="home">
+        <div data-role="header">
+            <h1>BBC Weather App UWS</h1>
+        </div>
+        <div data-role="content">
+            <select name="city" id="city" data-native-menu="false">
+                <option value="2640677">Paisley</option>
+                <option value="2650225">Edinburgh</option>
+                <option value="2648579">Glasgow</option>
+                <option value="2643743">London</option>
+                <option value="2657832">Aberdeen</option>
+                <option value="2964574">Dublin</option>
+            </select>
+            <a href="#result" data-role="button" id="displayWeatherButton">Show the weather</a>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar">
+            <a href="http://www.bbc.co.uk/weather/" data-role="button" id="BBCButton">BBC Weather Official Website</a>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="result" data-add-back-btn="true" >
+        <div data-role="header">
+            <h1 id="weatherTitle"></h1>
+            <a href="#" data-role="button" data-icon="back" data-rel="back">Back</a>
+        </div>
+        <div data-role="content">
+            <ul id="weatherList" data-role="listview" data-inset="true">
+                
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar" id="resultFooter">
+            
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="a" id="more" data-add-back-btn="true">
+        <div data-role="header">
+            <h1 id="informationTitle"></h1>
+            <a href="#" data-role="button" data-icon="back" data-rel="back">Back</a>
+        </div> 
+        <div data-role="content">
+            <ul id="morePara" data-role="listview" data-inset="true"></ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar" id="moreFooter">
+            
+        </div>
+    </div>
+</body>
+</html>
